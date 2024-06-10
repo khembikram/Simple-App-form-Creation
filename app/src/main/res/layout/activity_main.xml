@@ -101,8 +101,15 @@
       android:id="@+id/submit_button"
       android:layout_width="150dp"
       android:layout_height="wrap_content"
-      android:text="Submit"
+      android:text="Implicit Intent"
       android:layout_marginLeft="50dp"
       />
 
+  <Button
+      android:id="@+id/buttonExplicit"
+      android:layout_width="150dp"
+      android:layout_height="wrap_content"
+      android:text="Explicit Intent"
+      android:layout_marginLeft="50dp"
+      />
 </LinearLayout>

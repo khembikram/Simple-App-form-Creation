@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         editEmail = findViewById(R.id.edit_email);
         editPhone = findViewById(R.id.edit_phone);
         employeetype = findViewById(R.id.employeetype);
+        Button explicitButton = findViewById(R.id.buttonExplicit);
         Button submitButton = findViewById(R.id.submit_button);
 
         // Setting up the Spinner
@@ -51,9 +52,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(Intent.ACTION_VIEW);
 //                parsing Uri
                 intent.setData(Uri.parse("https://www.google.com"));
-//                passes the intent
+//                passes the intentc
                 startActivity(intent);
 
+            }
+        });
+        explicitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                startActivity(intent);
             }
         });
     }

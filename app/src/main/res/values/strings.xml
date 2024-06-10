@@ -1,8 +1,8 @@
 <resources>
-<string name="app_name">ProjectDemo</string>
-<string-array name="example_array">
-    <item>Permanent</item>
-    <item>Temporary</item>
-    <item>Freelancer</item>
-</string-array>
+    <string name="app_name">ProjectDemo</string>
+    <string-array name="example_array">
+        <item>Permanent</item>
+        <item>Temporary</item>
+        <item>Freelancer</item>
+    </string-array>
 </resources>
