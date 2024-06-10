@@ -1,5 +1,7 @@
 package com.firstproject.projectdemo;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -9,6 +11,8 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +47,12 @@ public class MainActivity extends AppCompatActivity {
                 String message2 = "Your Employee Type is : " + spinnerItem;
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
                 Toast.makeText(MainActivity.this, message2, Toast.LENGTH_LONG).show();
+//                Creating object of intent -> Views after action is performed
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                parsing Uri
+                intent.setData(Uri.parse("https://www.google.com"));
+//                passes the intent
+                startActivity(intent);
 
             }
         });
