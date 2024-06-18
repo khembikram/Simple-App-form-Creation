@@ -13,6 +13,9 @@
         android:theme="@style/Theme.ProjectDemo"
         tools:targetApi="31">
         <activity
+            android:name=".FragmentLearningActivity"
+            android:exported="false" />
+        <activity
             android:name=".SecondActivity"
             android:exported="false" />
         <activity
