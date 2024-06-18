@@ -1,6 +1,7 @@
 package com.firstproject.projectdemo;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
@@ -9,6 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 public class FragmentLearningActivity extends AppCompatActivity {
 
@@ -29,5 +34,28 @@ public class FragmentLearningActivity extends AppCompatActivity {
         frameLayout=findViewById(R.id.framelayout);
         btnOne = findViewById(R.id.btnFragOne);
         btnTwo = findViewById(R.id.btnFragTwo);
+
+
+        btnOne.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new FirstFragment());
+            }
+        });
+
+        btnTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                loadFragment(new  SecondFragment());
+            }
+        });
     }
+
+    private void loadFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.framelayout,fragment);
+        fragmentTransaction.commit();
+    }
+
 }
